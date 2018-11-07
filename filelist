@@ -1,0 +1,43 @@
+# Bash profiles
+.bash_profile
+.bashrc
+.profile
+
+# Xresources
+.Xresources
+
+# i3, polybar
+.config/i3/config
+.config/polybar/config
+.config/polybar/launch.sh
+
+# Dunst
+.config/dunst/dunstrc
+
+# kitty shell
+.config/kitty/kitty.conf
+
+# nvim
+.config/nvim/init.vim
+
+# ranger
+.config/ranger/rc.conf
+.config/ranger/rifle.conf
+# Not too sure about this, but having it in here anyways
+.config/ranger/scope.sh
+
+# rofi
+.config/rofi/base16-tomorrow-night.rasi
+.config/rofi/config
+
+# VSCode
+.config/Code/Code - OSS/Preferences
+
+# Zathura
+.config/zathura/zathurarc
+
+# spotdl
+.config/spotdl/config.yml
+
+# Steam skin
+.steam/steam/skins.Air-for-Steam-2018-0928
