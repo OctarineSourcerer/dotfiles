@@ -31,6 +31,8 @@ gaps outer 0
 smart_gaps on
 smart_borders on
 hide_edge_borders smart_no_gaps
+# If we connect HDMI1, put it to the right
+exec -no-startup-id xrandr --output HDMI1 --right-of "Screen 0" --auto
 
 # Because sometimes we _do_ want gaps
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -128,10 +130,8 @@ bindsym Ctrl+$mod+l exec --no-startup-id "i3lock -i ~/Pictures/dotGalaxy.png && 
 
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-# Show polybar
-bindsym $mod+b exec --no-startup-id polybar-msg cmd show
-# Hide polybar
-bindsym $mod+Shift+b exec --no-startup-id polybar-msg cmd hide
+# Toggle if polybar is visible
+bindsym $mod+b exec --no-startup-id polybar-msg cmd toggle
 
 # Start nm-applet
 exec --no-startup-id nm-applet

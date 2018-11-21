@@ -36,6 +36,7 @@ height = 25
 radius = 0.0
 fixed-center = false
 ; override-redirect = true
+enable-ipc = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
