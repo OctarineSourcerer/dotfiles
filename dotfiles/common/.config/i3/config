@@ -79,6 +79,9 @@ exec --no-startup-id setxkbmap -layout gb -option caps:ctrl_modifier
 exec --no-startup-id xcape -e Caps_Lock=Escape
 bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
+# Set a slightly lower kb delay, maybe 15% higher repeat rate
+exec --no-startup-id xset r rate 230 13
+
 
 ### Audio
 # Pulse Audio controls
@@ -142,10 +145,11 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+n exec --no-startup-id ~/.i3/new_workspace.sh
 
 # Start ranger - PLEASE DEAR GOD SET A PROPER SHORTCUT FOR THAT
-bindsym Control_L+Alt_L+e exec --no-startup-id "i3-sensible-terminal -e ranger"
+bindsym $mod+e exec --no-startup-id "i3-sensible-terminal -e ranger"
+bindsym Control+$mod+e exec --no-startup-id dolphin
 
 # System resources
-bindsym Control_L+Shift_L+Escape exec --no-startup-id "ksysguard"
+bindsym Control+Escape exec --no-startup-id "ksysguard"
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -210,7 +214,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+q layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
