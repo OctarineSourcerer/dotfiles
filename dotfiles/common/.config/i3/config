@@ -173,6 +173,9 @@ bindsym $mod+Shift+q kill
 
 # start rofi
 bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi"
+# Alt-Tab attempt (though Rofi has a bug which means it won't disappear if you don't tab an extra time)
+bindsym Mod1+Tab exec --no-startup-id "rofi -show window -kb-row-down 'Alt+Tab' -kb-accept-entry 'Return,!Alt_L,!Alt+Tab'"
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -266,7 +269,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+c reload; exec --no-startup-id notify-send "i3 config reloaded" -t 800
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 set $mode_exit (e)xit, (s)hutdown, (r)eboot
