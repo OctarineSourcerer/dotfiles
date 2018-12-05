@@ -39,8 +39,8 @@
 # spotdl
 .config/spotdl/config.yml
 
-# Steam skin
-.steam/steam/skins.Air-for-Steam-2018-0928
-
 # Font config
 .config/fontconfig/fonts.conf
+
+# Steam skin
+.steam/steam/skins.Air-for-Steam-2018-0928
