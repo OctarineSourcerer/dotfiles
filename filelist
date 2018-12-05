@@ -31,7 +31,7 @@
 .config/rofi/config
 
 # VSCode
-.config/Code/Code - OSS/Preferences
+.config/Code - OSS/User/settings.json
 
 # Zathura
 .config/zathura/zathurarc
@@ -41,6 +41,3 @@
 
 # Font config
 .config/fontconfig/fonts.conf
-
-# Steam skin
-.steam/steam/skins.Air-for-Steam-2018-0928
