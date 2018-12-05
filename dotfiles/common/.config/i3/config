@@ -32,7 +32,7 @@ smart_gaps on
 smart_borders on
 hide_edge_borders smart_no_gaps
 # If we connect HDMI1, put it to the right
-exec -no-startup-id xrandr --output HDMI1 --right-of "Screen 0" --auto
+exec -no-startup-id xrandr --output HDMI1 --left-of "Screen 0" --auto
 # Start udiskie for auto USB mount. No notification for now, as it stays a while
 exec --no-startup-id udiskie --no-notify
 
