@@ -6,6 +6,11 @@
 # Xresources
 .Xresources
 
+# GTK 2
+.gtkrc-2.0
+# GTK 3
+.config/gtk-3.0/settings.ini
+
 # i3, polybar
 .config/i3/config
 .config/polybar/config
