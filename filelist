@@ -49,3 +49,7 @@
 
 # Font config
 .config/fontconfig/fonts.conf
+
+# WPGgit stuff
+.config/wpg/templates
+.config/wpg/schemes
