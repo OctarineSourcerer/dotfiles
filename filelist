@@ -17,6 +17,9 @@
 # kitty shell
 .config/kitty/kitty.conf
 
+# Fish
+.config/fish/config.fish
+
 # nvim
 .config/nvim/init.vim
 

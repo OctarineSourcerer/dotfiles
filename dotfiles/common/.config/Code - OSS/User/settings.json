@@ -99,7 +99,6 @@
             ]
         },
     ],
-    "workbench.colorTheme": "Base16 Tomorrow Night Dark",
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorCustomizations": {
         "[Base16 Tomorrow Night Dark]": {
@@ -109,5 +108,6 @@
             "statusBar.border": "#282a2e",
             "list.hoverBackground": "#1d1f21"
         }
-    }
+    },
+    "workbench.colorTheme": "Base16 Tomorrow Night Dark"
 }
