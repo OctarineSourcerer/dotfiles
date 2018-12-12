@@ -1,4 +1,4 @@
-rofi.modi:                           window,run,ssh
+ndow,run,ssh
 rofi.width:                          50
 rofi.lines:                          15
 rofi.columns:                        1
