@@ -53,3 +53,9 @@
 # WPGgit stuff
 .config/wpg/templates
 .config/wpg/schemes
+
+# Default applications
+.config/mimeapps.list
+
+# Compton (needs compton-tryone for the kawase blur)
+.config/compton.conf

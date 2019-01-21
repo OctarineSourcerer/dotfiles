@@ -24,7 +24,7 @@ font pango:monospace 8
 
 ## Set up i3-gaps to work
 # Maybe change borders to 2 or 3 if borders turned off for single window?
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 gaps inner 0
 gaps outer 0
 # If one container, no gaps
@@ -131,7 +131,7 @@ mode "$mode_hscroll" {
 # Set background
 exec --no-startup-id "sh ~/.fehbg"
 # Set i3 lock to be our friend
-bindsym Ctrl+$mod+l exec --no-startup-id "i3lock -i ~/Pictures/dotGalaxy.png && echo mem > /sys/power/state" 
+bindsym Ctrl+$mod+l exec --no-startup-id "i3lock -i ~/Pictures/wispSpace.png && echo mem > /sys/power/state" 
 
 # Start polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -151,7 +151,7 @@ bindsym $mod+e exec --no-startup-id "i3-sensible-terminal -e ranger"
 bindsym Control+$mod+e exec --no-startup-id dolphin
 
 # System resources
-bindsym Control+Escape exec --no-startup-id "ksysguard"
+bindsym Control+Escape exec --no-startup-id "htop"
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -174,9 +174,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start rofi
-bindsym $mod+d exec --no-startup-id "rofi -combi-modi window,drun -show combi -modi combi"
+bindsym $mod+d exec --no-startup-id "rofi -show drun -modi drun,run"
 # Alt-Tab attempt (though Rofi has a bug which means it won't disappear if you don't tab an extra time)
-bindsym Mod1+Tab exec --no-startup-id "rofi -show window -kb-row-down 'Alt+Tab' -kb-accept-entry 'Return,!Alt_L,!Alt+Tab'"
+bindsym Mod1+Tab exec --no-startup-id "rofi -show window -kb-row-down 'Down,Alt+Tab' -kb-accept-entry 'Return,!Alt_L,!Alt+Tab'"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
