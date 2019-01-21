@@ -109,5 +109,6 @@
             "list.hoverBackground": "#1d1f21"
         }
     },
-    "workbench.colorTheme": "Base16 Tomorrow Night Dark"
+    "workbench.colorTheme": "Tomorrow Night (Sublime)",
+    "window.titleBarStyle": "native"
 }
