@@ -35,6 +35,8 @@ hide_edge_borders smart_no_gaps
 exec -no-startup-id xrandr --output HDMI1 --left-of "Screen 0" --auto
 # Start udiskie for auto USB mount. No notification for now, as it stays a while
 exec --no-startup-id udiskie --no-notify
+# Start compositor
+exec --no-startup-id compton -b
 
 # Because sometimes we _do_ want gaps
 set $mode_gaps Gaps: (o) outer, (i) inner
