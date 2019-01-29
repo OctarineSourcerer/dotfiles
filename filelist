@@ -33,6 +33,7 @@
 .config/ranger/rifle.conf
 # Not too sure about this, but having it in here anyways
 .config/ranger/scope.sh
+.config/ranger/commands.py
 
 # rofi
 .config/rofi/base16-tomorrow-night.rasi

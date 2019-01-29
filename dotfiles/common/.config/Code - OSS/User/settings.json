@@ -110,5 +110,6 @@
         }
     },
     "workbench.colorTheme": "Tomorrow Night (Sublime)",
-    "window.titleBarStyle": "native"
+    "window.titleBarStyle": "native",
+    "workbench.startupEditor": "newUntitledFile"
 }
