@@ -24,3 +24,5 @@ set smooth-scroll "true"
 set scroll-full-overlap 0.08
 
 set adjust-open "width"
+
+set continuous-hist-save "true"
