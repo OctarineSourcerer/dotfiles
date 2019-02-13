@@ -37,6 +37,9 @@ exec -no-startup-id xrandr --output HDMI1 --left-of "Screen 0" --auto
 exec --no-startup-id udiskie --no-notify
 # Start compositor
 exec --no-startup-id compton -b
+# Kill compositor
+bindsym $mod+bracketleft exec --no-startup-id pkill compton
+bindsym $mod+bracketright exec --no-startup-id compton -b
 
 # Because sometimes we _do_ want gaps
 set $mode_gaps Gaps: (o) outer, (i) inner
