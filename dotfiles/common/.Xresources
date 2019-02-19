@@ -1,4 +1,4 @@
-! Xresources base that's edited by wpgtk
+! Xresources base that is edited by wpgtk
 
 *foreground:   c5c8c6
 #ifdef background_opacity
