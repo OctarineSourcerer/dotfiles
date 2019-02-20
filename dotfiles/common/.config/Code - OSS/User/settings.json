@@ -111,5 +111,9 @@
     },
     "workbench.colorTheme": "Tomorrow Night (Sublime)",
     "window.titleBarStyle": "native",
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=PyQt5"
+    ],
 }
