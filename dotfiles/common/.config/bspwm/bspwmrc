@@ -20,6 +20,7 @@ bspc config pointer_action1     move
 
 bspc config focus_follows_pointer      true
 bspc config pointer_follows_focus      true
+bspc config pointer_follows_monitor    true
 
 # Startup stuff
 xrandr --output HDMI1 --left-of "Screen 0" --auto &
