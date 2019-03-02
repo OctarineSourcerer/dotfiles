@@ -62,6 +62,6 @@
 .config/compton.conf
 
 # bspwm
-.config/bspwmrc
+.config/bspwm/bspwmrc
 # sxhkd
 .config/sxhkd
