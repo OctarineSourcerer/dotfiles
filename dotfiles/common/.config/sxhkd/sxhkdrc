@@ -71,7 +71,7 @@ super + shift + r
 	bspc wm -r
 
 # Close/kill
-super + {q,shift + x}
+super + shift + {q,x}
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
