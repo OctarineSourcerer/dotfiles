@@ -17,7 +17,7 @@ control + Escape
 super + d
 	rofi -show drun -modi drun,run
 
-super + Tab
+alt + Tab
 	rofi -show window -kb-row-down 'Down,Alt+Tab' -kb-accept-entry 'Return,!Alt_L,!Alt+Tab'
 
 ###
@@ -71,7 +71,7 @@ super + shift + r
 	bspc wm -r
 
 # Close/kill
-super + {q,shift + q}
+super + {q,shift + x}
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
