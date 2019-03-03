@@ -17,7 +17,7 @@ control + Escape
 super + d
 	rofi -show drun -modi drun,run
 
-super + tab
+super + Tab
 	rofi -show window -kb-row-down 'Down,Alt+Tab' -kb-accept-entry 'Return,!Alt_L,!Alt+Tab'
 
 ###
