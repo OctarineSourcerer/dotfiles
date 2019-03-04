@@ -1,0 +1,45 @@
+#! /bin/sh
+
+sxhkd &
+
+for monitor in $(bspc query -M); do
+    bspc monitor $monitor -d 1 2 3 4
+done
+
+bspc config border_width         2
+bspc config window_gap           5
+bspc config top_padding          0
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config single_monocle       true
+
+bspc config pointer_mod         mod4
+bspc config pointer_action1     move
+
+bspc config focus_follows_pointer      true
+bspc config pointer_follows_focus      true
+bspc config pointer_follows_monitor    true
+
+# Startup stuff
+xrandr --output HDMI1 --left-of "Screen 0" --auto &
+dunst &
+udiskie &     # Automounting
+compton -b &
+
+# Set layout to gb, and CapsLock to behave as Ctrl when held
+setxkbmap -layout gb -option caps:ctrl_modifier
+# CapsLock = Esc when tapped
+xcape -e Caps_Lock=Escape
+# Set a slightly lower kb delay, maybe 15% higher repeat rate
+xset r rate 230 13
+
+# Touchpad
+xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Tapping Enabled' 1
+xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Natural Scrolling Enabled' 1
+xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Accel Speed' 0.4
+
+sh ~/.fehbg
+sh $HOME/.config/polybar/launch.sh
+nm-applet &

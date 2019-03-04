@@ -60,3 +60,8 @@
 
 # Compton (needs compton-tryone for the kawase blur)
 .config/compton.conf
+
+# bspwm
+.config/bspwm/bspwmrc
+# sxhkd
+.config/sxhkd
