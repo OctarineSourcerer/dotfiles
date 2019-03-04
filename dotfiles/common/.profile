@@ -4,3 +4,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # (yes me, this will get set in fish too)
 export XDG_CURRENT_DESKTOP="kde"
 export EDITOR="nvim"
+export VISUAL="nvim"

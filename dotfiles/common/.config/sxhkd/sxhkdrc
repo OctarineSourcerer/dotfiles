@@ -7,6 +7,9 @@ super + Return
 super + e
 	kitty -e ranger
 
+super + bracketleft
+	pkill compton ; compton -b
+
 control + super + e
 	dolphin
 
@@ -34,7 +37,7 @@ XF86AudioMute
 
 ## Media controls
 super + {apostrophe,comma,period}
-	playerctl {play-pause,next,previous}
+	playerctl {play-pause,previous,next}
 
 
 ## Screenshots (you can clean this up, me)
@@ -155,7 +158,6 @@ super + ctrl + shift + space
 #
 # move/resize
 #
-
 # expand a window by moving one of its side outward
 super + alt + {Left,Down,Up,Right}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}

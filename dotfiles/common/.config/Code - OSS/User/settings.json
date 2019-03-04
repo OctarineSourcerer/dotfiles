@@ -116,4 +116,5 @@
     "python.linting.pylintArgs": [
         "--extension-pkg-whitelist=PyQt5"
     ],
+    "vsicons.dontShowNewVersionMessage": true,
 }
