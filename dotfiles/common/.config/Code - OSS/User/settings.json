@@ -109,11 +109,11 @@
             "list.hoverBackground": "#1d1f21"
         }
     },
-    "workbench.colorTheme": "Tomorrow Night (Sublime)",
     "window.titleBarStyle": "native",
     "workbench.startupEditor": "newUntitledFile",
 
     "python.linting.pylintArgs": [
         "--extension-pkg-whitelist=PyQt5"
     ],
+    "workbench.colorTheme": "Tomorrow Night (Sublime)",
 }
