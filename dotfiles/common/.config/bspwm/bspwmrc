@@ -43,3 +43,7 @@ xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Accel Speed' 0.4
 sh ~/.fehbg
 sh $HOME/.config/polybar/launch.sh
 nm-applet &
+
+
+## Rules
+bspc rule -a Zathura state=tiled
