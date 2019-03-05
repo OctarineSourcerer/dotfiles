@@ -50,3 +50,9 @@
     foreground = "#cc6666"
     background = "#1d1f21"
     timeout = 0
+
+[text-multicopy]
+    appname = "Firefox Developer Edition"
+    summary = "Text MultiCopy"
+    urgency = low
+    timeout = 1
