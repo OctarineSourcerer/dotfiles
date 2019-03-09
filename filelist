@@ -36,7 +36,7 @@
 .config/ranger/commands.py
 
 # rofi
-.config/rofi/base16-tomorrow-night.rasi
+.config/rofi/transparent.rofi
 .config/rofi/config
 
 # VSCode
