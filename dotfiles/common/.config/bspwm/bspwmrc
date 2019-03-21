@@ -46,4 +46,5 @@ nm-applet &
 
 
 ## Rules
+bspc config external_rules_command ~/.config/bspwm/external-rules.sh
 bspc rule -a Zathura state=tiled
