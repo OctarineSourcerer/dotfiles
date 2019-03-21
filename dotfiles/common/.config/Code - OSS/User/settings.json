@@ -117,4 +117,5 @@
     ],
     "workbench.colorTheme": "Tomorrow Night (Sublime)",
     "vsicons.dontShowNewVersionMessage": true,
+    "razor.disabled": true,
 }
