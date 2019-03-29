@@ -46,7 +46,7 @@ shift + @Print
 	maim -s | xclip -selection clipboard -t image/png -i
 # Current window
 ctrl + @Print
-	maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png -i
+	maim -i (xdotool getactivewindow) | xclip -selection clipboard -t image/png -i
 # Whole desktop
 @Print
 	maim | xclip -selection clipboard -t image/png -i
