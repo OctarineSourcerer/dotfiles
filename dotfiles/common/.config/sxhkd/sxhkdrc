@@ -52,7 +52,7 @@ shift + @Print
 	maim | xclip -selection clipboard -t image/png -i
 
 # Lock
-ctrl + super + l
+super + l
 	i3lock -i ~/Pictures/wispSpace.png && echo mem > /sys/power/state
 
 
