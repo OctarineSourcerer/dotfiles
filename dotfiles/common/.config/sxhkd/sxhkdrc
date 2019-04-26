@@ -7,7 +7,7 @@ super + Return
 super + e
 	kitty -e ranger
 
-super + bracketleft
+super + ctrl + c
 	pkill compton ; compton -b
 
 control + super + e
@@ -97,12 +97,12 @@ super + g
 	bspc node -s biggest
 
 ## State/flags
-# set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+# set the window's tiledness
+super + {_, ctrl, shift} + t
+	bspc node -t {tiled,pseudo_tiled,floating}
 
 # set the node flags
-super + ctrl + {m,x,y,z}
+super + n ; {m,l,s,p}
 	bspc node -g {marked,locked,sticky,private}
 
 ## Focus/swap
@@ -119,7 +119,7 @@ super + {_,shift + }c
 	bspc node -f {next,prev}.local
 
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
+super + shift + alt + {Left,Right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
@@ -144,7 +144,6 @@ super + shift + w
 #
 # preselect
 #
-
 # preselect the direction
 super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
@@ -169,7 +168,7 @@ super + alt + {Left,Down,Up,Right}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super + alt + shift + {Left,Down,Up,Right}
+super + alt + ctrl + {Left,Down,Up,Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
