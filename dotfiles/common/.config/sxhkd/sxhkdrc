@@ -13,8 +13,8 @@ super + bracketleft
 control + super + e
 	dolphin
 
-control + Escape
-	htop
+control + {_, shift +} Escape
+	{htop, gotop}
 
 # Rofi
 super + d
@@ -42,10 +42,10 @@ super + {apostrophe,comma,period}
 
 ## Screenshots (you can clean this up, me)
 # Select area
-shift + @Print
+ctrl + @Print
 	maim -s | xclip -selection clipboard -t image/png -i
 # Current window
-ctrl + @Print
+shift + @Print
 	maim -i (xdotool getactivewindow) | xclip -selection clipboard -t image/png -i
 # Whole desktop
 @Print
