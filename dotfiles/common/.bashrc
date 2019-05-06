@@ -12,3 +12,4 @@ export XDG_CURRENT_DESKTOP="kde"
 export VISUAL="nvim"
 export EDITOR="nvim"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json

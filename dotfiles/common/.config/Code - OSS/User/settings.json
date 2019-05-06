@@ -2,7 +2,7 @@
     "editor.fontFamily": "'Fira Code', 'Iosevka Term', 'Font Awesome', 'Wuncon Siji', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "window.menuBarVisibility": "toggle",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "FSharp.fsacRuntime": "netcore",
     "latex-workshop.view.pdf.viewer": "tab",
     "zenMode.centerLayout": false,
@@ -115,7 +115,9 @@
     "python.linting.pylintArgs": [
         "--extension-pkg-whitelist=PyQt5"
     ],
-    "workbench.colorTheme": "Tomorrow Night (Sublime)",
     "vsicons.dontShowNewVersionMessage": true,
     "razor.disabled": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.colorTheme": "Palenight Italic",
 }

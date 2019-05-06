@@ -179,5 +179,7 @@ super + shift + Escape
     pkill -USR1 -x sxhkd ; notify-send "sxhkd config reloaded" -t 800 
 
 # rotate the desktop
-super + r
-	bspc node @/ -R 90
+super + {_,ctrl} + r
+	bspc node @{/,parent} -R 90
+
+# rotate the parent node's children
