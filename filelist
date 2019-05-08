@@ -37,6 +37,7 @@
 
 # rofi
 .config/rofi/transparent.rofi
+.config/rofi/slate.rofi
 .config/rofi/config
 
 # VSCode
