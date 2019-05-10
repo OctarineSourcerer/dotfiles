@@ -119,5 +119,5 @@
     "razor.disabled": true,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "workbench.colorTheme": "Palenight Operator",
+    "workbench.colorTheme": "Palenight Italic",
 }
