@@ -1,27 +1,27 @@
 ! Xresources base that's edited by wpgtk
 
-*foreground:   c5c8c6
+*foreground:   #9bc7d5
 #ifdef background_opacity
-*background:   [background_opacity]1d1f21
+*background:   [background_opacity]#1c0c07
 #else
-*background:   1d1f21
+*background:   #1c0c07
 #endif
-*cursorColor:  c5c8c6
+*cursorColor:  #9bc7d5
 
-*color0:       1d1f21
-*color1:       cc6666
-*color2:       b5bd68
-*color3:       f0c674
-*color4:       81a2be
-*color5:       b294bb
-*color6:       8abeb7
-*color7:       c5c8c6
+*color0:       #1c0c07
+*color1:       #D7681D
+*color2:       #55555E
+*color3:       #F0AB34
+*color4:       #3E738E
+*color5:       #A34F24
+*color6:       #8F4226
+*color7:       #9bc7d5
 
-*color8:       969896
-*color9:       cc6666
-*color10:      b5bd68
-*color11:      f0c674
-*color12:      81a2be
-*color13:      b294bb
-*color14:      8abeb7
-*color15:      ffffff
+*color8:       #441c10
+*color9:       #ff8415
+*color10:      #626285
+*color11:      #ffe330
+*color12:      #4399c5
+*color13:      #e06221
+*color14:      #c55025
+*color15:      #cdffff

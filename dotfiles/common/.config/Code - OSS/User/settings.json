@@ -120,4 +120,7 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.colorTheme": "Palenight Italic",
+    "explorer.confirmDelete": false,
+    "FSharp.msbuildHost": ".net core",
+    "docomment.activateOnEnter": true,
 }

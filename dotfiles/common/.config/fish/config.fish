@@ -17,6 +17,9 @@ set -xU _JAVA_AWT_WM_NONREPARENTING 1
 
 set -xU VK_ICD_FILENAMES /usr/share/vulkan/icd.d/nvidia_icd.json
 
+# Opt out of .NET CLI telemetry
+set -xU DOTNET_CLI_TELEMETRY_OPTOUT 1
+
 # Sets up link to mDrive, must have approved ssh key and mDrive folder in home
 alias mDrive="sshfs -o IdentityFile=~/.ssh/id_rsa dsdgom@unix4.essex.ac.uk:/ufs/servh02/users/dsdgom ~/mDrive/"
 alias vim="nvim"
