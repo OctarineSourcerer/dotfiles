@@ -30,6 +30,7 @@ xrandr --output HDMI1 --left-of "Screen 0" --auto &
 dunst &
 udiskie &     # Automounting
 compton -b &
+/usr/lib/xfce-polkit/xfce-polkit & # Polkit auth agent
 
 # Set layout to gb, and CapsLock to behave as Ctrl when held
 setxkbmap -layout gb -option caps:ctrl_modifier
