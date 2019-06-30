@@ -72,8 +72,8 @@ tray-padding = 2
 wm-restack = bspwm
 ;wm-restack = i3
 
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprev
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
 
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
