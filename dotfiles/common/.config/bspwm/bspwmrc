@@ -47,7 +47,7 @@ xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Accel Speed' 0.4
 sh ~/.fehbg
 sh $HOME/.config/polybar/launch.sh
 nm-applet &
-
+cbatticon & # Applet for battery stuff
 
 ## Rules
 bspc config external_rules_command ~/.config/bspwm/external-rules.sh
