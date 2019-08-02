@@ -10,8 +10,9 @@ super + e
 super + ctrl + c
 	pkill compton ; compton -b
 
+# Can't be shift, that's your shutdown stuff
 control + super + e
-	dolphin
+	thunar
 
 control + {_, shift +} Escape
 	{htop, gotop}
@@ -52,7 +53,7 @@ shift + @Print
 	maim | xclip -selection clipboard -t image/png -i
 
 # Lock
-super + l
+ctrl + super + l
 	i3lock -i ~/Pictures/wispSpace.png && echo mem > /sys/power/state
 
 
@@ -171,10 +172,6 @@ super + alt + {Left,Down,Up,Right}
 super + alt + ctrl + {Left,Down,Up,Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
-# move a floating window
-super + {h,j,k,l}
-    bspc node -v {-20 0,0 20,0 -20,20 0}
-
 super + shift + Escape
     pkill -USR1 -x sxhkd ; notify-send "sxhkd config reloaded" -t 800 
 
@@ -183,3 +180,30 @@ super + {_,ctrl} + r
 	bspc node @{/,parent} -R 90
 
 # rotate the parent node's children
+
+
+## Vim versions of all the moving stuff
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + ctrl + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# focus the next/previous desktop in the current monitor
+super + shift + alt + {h,l}
+	bspc desktop -f {prev,next}.local
+
+## focus the node in the given direction
+super + {_,shift + ,ctrl + shift +}{h,j,k,l}
+	bspc node -{f,s,n} {west,south,north,east} --follow
+
+## This has no room for existence with the vim-y bindings, and I almost never use it, so... g'bye
+# move a floating window
+# super + {h,j,k,l}
+#     bspc node -v {-20 0,0 20,0 -20,20 0}
