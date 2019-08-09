@@ -44,6 +44,9 @@ xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Tapping Enabled' 1
 xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Natural Scrolling Enabled' 1
 xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Accel Speed' 0.4
 
+# Mouse I usually connect
+xinput set-prop 'Logitech G203 Prodigy Gaming Mouse' 'libinput Accel Speed' 0.45
+
 sh ~/.fehbg
 sh $HOME/.config/polybar/launch.sh
 nm-applet &
