@@ -22,7 +22,7 @@ super + d
 	rofi -show drun -modi drun,run
 
 alt + Tab
-	rofi -show window -kb-row-down 'Down,Alt+Tab' -kb-accept-entry 'Return,!Alt_L,!Alt+Tab'
+	rofi -show window -kb-row-down 'Down,Alt+Tab' -kb-accept-entry 'Return,!Alt_L,!Alt+Tab' # && maim | xclip -selection clipboard -t image/png -i
 
 ###
 # Deal with gaps at some point
@@ -39,6 +39,9 @@ XF86AudioMute
 ## Media controls
 super + {apostrophe,comma,period}
 	playerctl {play-pause,previous,next}
+
+super + shift + {comma,period}
+	playerctl position 5{-,+}
 
 
 ## Screenshots (you can clean this up, me)
