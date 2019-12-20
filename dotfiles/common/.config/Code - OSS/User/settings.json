@@ -100,7 +100,7 @@
             ]
         },
     ],
-    "workbench.iconTheme": "vscode-icons",
+    //"workbench.iconTheme": "vscode-icons",
     "workbench.colorCustomizations": {
         "[Base16 Tomorrow Night Dark]": {
             "sideBarSectionHeader.background": "#282a2e",
