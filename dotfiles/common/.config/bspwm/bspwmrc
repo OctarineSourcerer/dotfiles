@@ -29,7 +29,7 @@ bspc config pointer_follows_monitor    true
 xrandr --output HDMI1 --left-of "Screen 0" --auto &
 dunst &
 udiskie &     # Automounting
-compton -b &
+# picom -b & # Commented out cos lack of kawase blur atm
 /usr/lib/xfce-polkit/xfce-polkit & # Polkit auth agent
 
 # Set layout to gb, and CapsLock to behave as Ctrl when held
