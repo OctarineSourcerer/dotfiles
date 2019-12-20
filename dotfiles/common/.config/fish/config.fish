@@ -26,6 +26,8 @@ set -xU QT_QPA_PLATFORMTHEME qt5ct
 # Sets up link to mDrive, must have approved ssh key and mDrive folder in home
 alias mDrive="sshfs -o IdentityFile=~/.ssh/id_rsa dsdgom@unix4.essex.ac.uk:/ufs/servh02/users/dsdgom ~/mDrive/"
 alias vim="nvim"
+alias gpuname="glxinfo | grep \"OpenGL renderer\""
+alias switchgpu="optimus-manager --switch auto --no-confirm"
 
 function reset_time --description 'Update system clock, then sets hwclock to system clock. Useful for when Windows breaks time with it being localtime'
 	sudo ntpd -qg
