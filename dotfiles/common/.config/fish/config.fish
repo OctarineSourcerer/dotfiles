@@ -33,3 +33,22 @@ function reset_time --description 'Update system clock, then sets hwclock to sys
 	sudo ntpd -qg
 	sudo hwclock --systohc
 end
+
+function youtube-song
+	youtube-dl $argv[1] -f 140 
+	# This should be in config
+	# --metadata-from-title "%(artist)s - %(title)s"
+end
+
+function copy_image
+	xclip -selection clipboard -t image/png -i $argv[1]
+end
+
+# Set virtual terminal colours?
+if test "$TERM" = "linux"
+    set _SEDCMD 's/.*\*color\([0-9]\{1,\}\).*\([0-9a-fA-F]\{6\}\).*/\1 \2/p'
+    for i in (sed -n "$_SEDCMD" $HOME/.Xresources | awk '$1 < 16 {printf "\\\\e]P%X%s\n", $1, $2}')
+        echo -en "$i"
+    end
+    clear
+end
