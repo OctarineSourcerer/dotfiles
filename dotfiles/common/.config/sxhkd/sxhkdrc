@@ -70,8 +70,8 @@ super + shift + b
 
 ## bspwm controls ##
 # Quit/shutdown/reboot
-super + shift + e ; {e,s,r}
-	{bspc quit,systemctl poweroff,systemctl reboot}
+super + shift + e ; {e,s,r,g}
+	{bspc quit,systemctl poweroff,systemctl reboot,optimus-manager --switch auto --no-confirm}
 
 # Restart
 super + shift + r
