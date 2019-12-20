@@ -1,3 +1,4 @@
+set font "monospace normal 12"
 set default-bg "#1d1f21"
 set default-fg "#e0e0e0"
 set completion-group-bg "#1d1f21"
@@ -8,6 +9,7 @@ set recolor-reverse-video "true"
 set recolor-keephue "true"
 set statusbar-bg "#282a2e"
 set statusbar-fg "#e0e0e0"
+set index-active-bg "#81a2be"
 map <C-h> set recolor-keephue toggle
 
 set selection-clipboard clipboard
