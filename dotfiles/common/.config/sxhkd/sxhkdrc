@@ -28,6 +28,10 @@ alt + Tab
 # Deal with gaps at some point
 ###
 
+## Brightness
+super + {KP_Add,KP_Subtract}
+	light {-A 10,-U 10}
+
 ## Audio controls
 XF86Audio{RaiseVolume,LowerVolume}
 	pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
