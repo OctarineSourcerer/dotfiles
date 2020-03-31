@@ -2,7 +2,7 @@
     "editor.fontFamily": "'Fira Code', 'Iosevka Term', 'Font Awesome', 'Wuncon Siji', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "window.menuBarVisibility": "toggle",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 0,
     "FSharp.fsacRuntime": "netcore",
     "latex-workshop.view.pdf.viewer": "tab",
     "zenMode.centerLayout": false,
@@ -37,6 +37,16 @@
                 "-file-line-error",
                 "-pdf",
                 "%DOC%"
+            ]
+        },
+        {
+            "name": "bibsync",
+            "command": "curl",
+            "args": [
+                "http://127.0.0.1:23119/better-bibtex/library?/1/library.biblatex" ,
+                "-s", 
+                "--output",
+                "references.bib"
             ]
         },
         {
@@ -79,6 +89,19 @@
             "name": "latexmk",
             "tools": [
                 "latexmk"
+            ]
+        },
+        {
+            "name": "Sync bib then latexmk",
+            "tools": [
+                "bibsync",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "Sync bib",
+            "tools": [
+                "bibsync",
             ]
         },
         {
@@ -134,5 +157,11 @@
     "editor.cursorSmoothCaretAnimation": true,
     "terminal.external.linuxExec": "kitty",
     "terminal.integrated.fontSize": 15,
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+
+    // Haskell Settings stuff
+    "haskell.hlint.executablePath": "/home/dan/.local/bin/hlint",
+    "languageServerHaskell.trace.server": "verbose",
+    "languageServerHaskell.hieExecutablePath": "hie-8.8.3",
+    "python.pythonPath": "/bin/python3.8",
 }

@@ -12,6 +12,9 @@ set -xU LESS_TERMCAP_us (printf "\e[01;32m")
 set -xU VISUAL "nvim"
 set -xU EDITOR "nvim"
 
+set -xU SXHKD_SHELL '/usr/bin/sh'
+
+
 # Necessary for IntelliJ IDEA to start up nicely
 set -xU _JAVA_AWT_WM_NONREPARENTING 1
 

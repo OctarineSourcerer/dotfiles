@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 ## Starting/killing programs
 # terminal
 
@@ -8,7 +10,7 @@ super + e
 	kitty -e ranger
 
 super + ctrl + c
-	pkill compton ; compton -b
+	pkill picom ; picom -b --experimental-backends --use-damage
 
 # Can't be shift, that's your shutdown stuff
 control + super + e
@@ -21,9 +23,12 @@ control + {_, shift +} Escape
 super + d
 	rofi -show drun -modi drun,run
 
+super + alt + Tab
+	rofi -show window -kb-row-down 'Down,Alt+Tab' -kb-accept-entry 'Return,!Alt_L,!Alt+Tab' -me-select-entry '' -me-accept-entry 'MousePrimary'
+	
+	# && maim | xclip -selection clipboard -t image/png -i
 alt + Tab
-	rofi -show window -kb-row-down 'Down,Alt+Tab' -kb-accept-entry 'Return,!Alt_L,!Alt+Tab' # && maim | xclip -selection clipboard -t image/png -i
-
+	skippy-xd --activate-window-picker
 ###
 # Deal with gaps at some point
 ###
@@ -61,7 +66,7 @@ shift + @Print
 
 # Lock
 ctrl + super + l
-	i3lock -i ~/Pictures/wispSpace.png && echo mem > /sys/power/state
+	i3lock -i ~/Pictures/lockscreen.png && echo mem > /sys/power/state
 
 
 # Toggle polybar
@@ -140,12 +145,19 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+### Bounce between a desktop, or if you are currently on that desktop, the last one
+super + {1-9,0}
+    desktop='^{1-9,10}'; \
+    bspc query -D -d "$desktop.focused" && bspc desktop -f last || bspc desktop -f "$desktop"
+
+# Send a window to a desktop
+super + shift + {1-9,0}
+	bspc node -d '^{1-9,10}'
 
 super + w
 	bspc monitor -f next
+
+# Send to next active workspace (really, next monitor)
 super + shift + w
 	bspc node -d next.active; \
 	bspc desktop -f next.active

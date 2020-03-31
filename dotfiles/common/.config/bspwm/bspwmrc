@@ -1,5 +1,9 @@
 #! /bin/sh
 
+export SXHKD_SHELL="/usr/bin/bash"
+# Set XDG_CURRENT_DESKTOP for mimetypes
+export XDG_CURRENT_DESKTOP="bspwm"
+
 sxhkd &
 
 for monitor in $(bspc query -M); do
@@ -22,15 +26,17 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
 
 bspc config focus_follows_pointer      true
-bspc config pointer_follows_focus      true
+# bspc config pointer_follows_focus      true
 bspc config pointer_follows_monitor    true
 
 # Startup stuff
-xrandr --output HDMI1 --left-of "Screen 0" --auto &
+/home/dan/.screenlayout/Home.sh
 dunst &
 udiskie &     # Automounting
 # picom -b & # Commented out cos lack of kawase blur atm
 /usr/lib/xfce-polkit/xfce-polkit & # Polkit auth agent
+skippy-xd --start-daemon &
+xset led &
 
 # Set layout to gb, and CapsLock to behave as Ctrl when held
 setxkbmap -layout gb -option caps:ctrl_modifier
