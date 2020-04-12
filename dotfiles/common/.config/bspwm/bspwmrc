@@ -10,7 +10,7 @@ for monitor in $(bspc query -M); do
     bspc monitor $monitor -d 1 2 3 4
 done
 
-bspc config border_width         2
+bspc config border_width         0
 bspc config window_gap           0
 bspc config top_padding          0
 
@@ -33,7 +33,7 @@ bspc config pointer_follows_monitor    true
 /home/dan/.screenlayout/Home.sh
 dunst &
 udiskie &     # Automounting
-# picom -b & # Commented out cos lack of kawase blur atm
+picom -b --experimental-backends --use-damage &
 /usr/lib/xfce-polkit/xfce-polkit & # Polkit auth agent
 skippy-xd --start-daemon &
 xset led &
