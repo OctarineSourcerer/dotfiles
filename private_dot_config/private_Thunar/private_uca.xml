@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1562544836502695-1</unique-id>
+	<command>kitty -d %f</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Media info</name>
+	<unique-id>1586609818591625-1</unique-id>
+	<command>kitty -c &quot;mediainfo %f&quot;</command>
+	<description>Gets info about a media file</description>
+	<patterns>*</patterns>
+	<audio-files/>
+	<video-files/>
+</action>
+</actions>

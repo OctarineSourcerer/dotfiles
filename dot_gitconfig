@@ -1,0 +1,7 @@
+[user]
+	email = daniel.gomme@yahoo.co.uk
+	name = Dan
+[usern]
+	name = Dan
+[core]
+	autocrlf = input

@@ -1,0 +1,195 @@
+{
+  "*": {
+    "env": "production",
+    "core": {
+      "themes": [
+        "ui-light"
+      ],
+      "disabledPackages": [
+        "message-view-on-github",
+        "personal-level-indicators",
+        "phishing-detection",
+        "nylas-private-salesforce",
+        "github-contact-card",
+        "keybase",
+        "composer-markdown",
+        "composer-scheduler",
+        "composer-mail-merge",
+        "send-and-archive",
+        "main-calendar"
+      ],
+      "workspace": {
+        "mode": "split",
+        "hiddenLocations": {
+          "MessageListSidebar": {
+            "id": "MessageListSidebar",
+            "Toolbar": {
+              "id": "MessageListSidebar:Toolbar"
+            }
+          }
+        }
+      },
+      "keymapTemplate": "Gmail",
+      "theme": "ui-arc-dark",
+      "tutorial": {
+        "seen": [
+          "ThreadSearchBar",
+          "ActivityListButton",
+          "ModeToggle",
+          "SendRemindersPopoverButton",
+          "LinkTrackingButton",
+          "ToolbarSnooze",
+          "OpenTrackingButton"
+        ]
+      }
+    },
+    "identity": {
+      "id": "bd1eb127-e886-4fe4-8aa1-e868d23e1d6d",
+      "firstName": "Dan",
+      "lastName": "Gomme",
+      "emailAddress": "daniel.gomme@yahoo.co.uk",
+      "object": "identity",
+      "createdAt": "2018-06-14T14:11:16.000Z",
+      "stripePlan": "Basic",
+      "stripePlanEffective": "Basic",
+      "stripeCustomerId": "cus_D32EITAxJcCabE",
+      "stripePeriodEnd": "2020-04-14T14:11:15.000Z",
+      "featureUsage": {
+        "snooze": {
+          "quota": 15,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "send-later": {
+          "quota": 5,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "thread-sharing": {
+          "quota": 3,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "link-tracking": {
+          "quota": 5,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "open-tracking": {
+          "quota": 5,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "contact-profiles": {
+          "quota": 3,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "send-reminders": {
+          "quota": 5,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        },
+        "translation": {
+          "quota": 50,
+          "period": "weekly",
+          "usedInPeriod": 0,
+          "featureLimitName": "basic-limit"
+        }
+      }
+    },
+    "accounts": [
+      {
+        "id": "ab8ef04b",
+        "metadata": [],
+        "name": "Daniel Gomme",
+        "provider": "gmail",
+        "emailAddress": "gamer633697@gmail.com",
+        "settings": {
+          "imap_allow_insecure_ssl": false,
+          "imap_host": "imap.gmail.com",
+          "imap_port": 993,
+          "imap_security": "SSL / TLS",
+          "imap_username": "gamer633697@gmail.com",
+          "refresh_client_id": "662287800555-0a5h4ii0e9hsbpq0mqtul7fja0jhf9uf.apps.googleusercontent.com",
+          "smtp_allow_insecure_ssl": false,
+          "smtp_host": "smtp.gmail.com",
+          "smtp_port": 587,
+          "smtp_security": "STARTTLS",
+          "smtp_username": "gamer633697@gmail.com"
+        },
+        "label": "gamer633697@gmail.com",
+        "autoaddress": {
+          "type": "bcc",
+          "value": ""
+        },
+        "aliases": [],
+        "syncState": "ok",
+        "__cls": "Account"
+      },
+      {
+        "id": "225fb21c",
+        "metadata": [],
+        "name": "Dan Gomme",
+        "provider": "outlook",
+        "emailAddress": "dsdgom@essex.ac.uk",
+        "settings": {
+          "imap_allow_insecure_ssl": false,
+          "imap_host": "outlook.office365.com",
+          "imap_port": 993,
+          "imap_security": "SSL / TLS",
+          "imap_username": "dsdgom@essex.ac.uk",
+          "smtp_allow_insecure_ssl": false,
+          "smtp_host": "smtp.office365.com",
+          "smtp_port": 587,
+          "smtp_security": "STARTTLS",
+          "smtp_username": "dsdgom@essex.ac.uk"
+        },
+        "label": "dsdgom@essex.ac.uk",
+        "autoaddress": {
+          "type": "bcc",
+          "value": ""
+        },
+        "aliases": [],
+        "syncState": "ok",
+        "__cls": "Account"
+      },
+      {
+        "id": "9c4d60a6",
+        "metadata": [],
+        "name": "Dan Gomme",
+        "provider": "yahoo",
+        "emailAddress": "daniel.gomme@yahoo.co.uk",
+        "settings": {
+          "imap_allow_insecure_ssl": false,
+          "imap_host": "imap.mail.yahoo.com",
+          "imap_port": 993,
+          "imap_security": "SSL / TLS",
+          "imap_username": "daniel.gomme@yahoo.co.uk",
+          "smtp_allow_insecure_ssl": false,
+          "smtp_host": "smtp.mail.yahoo.com",
+          "smtp_port": 465,
+          "smtp_security": "SSL / TLS",
+          "smtp_username": "daniel.gomme@yahoo.co.uk"
+        },
+        "label": "daniel.gomme@yahoo.co.uk",
+        "autoaddress": {
+          "type": "bcc",
+          "value": ""
+        },
+        "aliases": [],
+        "syncState": "ok",
+        "__cls": "Account"
+      }
+    ],
+    "accountsVersion": 8,
+    "signatures": {}
+  }
+}

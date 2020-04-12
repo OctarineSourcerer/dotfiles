@@ -1,0 +1,64 @@
+#! /bin/sh
+
+export SXHKD_SHELL="/usr/bin/bash"
+# Set XDG_CURRENT_DESKTOP for mimetypes
+export XDG_CURRENT_DESKTOP="bspwm"
+
+sxhkd &
+
+for monitor in $(bspc query -M); do
+    bspc monitor $monitor -d 1 2 3 4
+done
+
+bspc config border_width         0
+bspc config window_gap           0
+bspc config top_padding          0
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config single_monocle       true
+bspc config automatic_scheme     alternate
+
+bspc config pointer_modifier mod4
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+
+bspc config focus_follows_pointer      true
+# bspc config pointer_follows_focus      true
+bspc config pointer_follows_monitor    true
+
+# Startup stuff
+/home/dan/.screenlayout/Home.sh
+dunst &
+udiskie &     # Automounting
+picom -b --experimental-backends --use-damage &
+/usr/lib/xfce-polkit/xfce-polkit & # Polkit auth agent
+skippy-xd --start-daemon &
+xset led &
+
+# Set layout to gb, and CapsLock to behave as Ctrl when held
+setxkbmap -layout gb -option caps:ctrl_modifier
+# CapsLock = Esc when tapped
+xcape -e Caps_Lock=Escape
+# Set a slightly lower kb delay, maybe 15% higher repeat rate
+xset r rate 230 13
+
+# Touchpad
+xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Tapping Enabled' 1
+xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Natural Scrolling Enabled' 1
+xinput set-prop 'ETPS/2 Elantech Touchpad' 'libinput Accel Speed' 0.4
+
+# Mouse I usually connect
+xinput set-prop 'Logitech G203 Prodigy Gaming Mouse' 'libinput Accel Speed' 0.45
+
+sh ~/.fehbg
+sh $HOME/.config/polybar/launch.sh
+nm-applet &
+cbatticon & # Applet for battery stuff
+
+## Rules
+bspc config external_rules_command ~/.config/bspwm/external-rules.sh
+bspc rule -a Zathura state=tiled
+bspc rule -a Spotify desktop=4

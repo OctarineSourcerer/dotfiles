@@ -1,0 +1,167 @@
+{
+    "editor.fontFamily": "'Fira Code', 'Iosevka Term', 'Font Awesome', 'Wuncon Siji', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": 0,
+    "FSharp.fsacRuntime": "netcore",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "zenMode.centerLayout": false,
+    "editor.wordWrap": "on",
+    "workbench.activityBar.visible": true,
+    "latex-workshop.view.pdf.zoom": "page-actual",
+    "latex-workshop.view.pdf.external.synctex": {
+        "command": "zathura",
+        "args": [
+            "--synctex-forward=%LINE%",
+            "%PDF%",
+            "%TEX%"
+        ]
+    },
+    "latex-workshop.view.pdf.external.viewer.command": "zathura",
+    "latex-workshop.view.pdf.external.viewer.args": ["%PDF%"],
+    "latex-workshop.view.pdf.external.synctex.args": [
+        "--synctex-forward=%LINE%",
+        "%PDF%",
+        "%TEX%"
+    ],
+    "latex-workshop.view.pdf.invert": 0.9,
+    "eppz-code.disableAnalytics": true,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-pdflatex=lualatex",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibsync",
+            "command": "curl",
+            "args": [
+                "http://127.0.0.1:23119/better-bibtex/library?/1/library.biblatex" ,
+                "-s", 
+                "--output",
+                "references.bib"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "Sync bib then latexmk",
+            "tools": [
+                "bibsync",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "Sync bib",
+            "tools": [
+                "bibsync",
+            ]
+        },
+        {
+            "name": "lualatex -> biber -> lualatex*2",
+            "tools": [
+                "lualatex",
+                "biber",
+                "lualatex",
+                "lualatex"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+    ],
+    //"workbench.iconTheme": "vscode-icons",
+    "workbench.colorCustomizations": {
+        "[Base16 Tomorrow Night Dark]": {
+            "sideBarSectionHeader.background": "#282a2e",
+            "statusBar.background": "#1d1f21",
+            "statusBar.foreground": "#e0e0e0",
+            "statusBar.border": "#282a2e",
+            "list.hoverBackground": "#1d1f21"
+        }
+    },
+    "window.titleBarStyle": "native",
+    "workbench.startupEditor": "newUntitledFile",
+
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=PyQt5"
+    ],
+    "vsicons.dontShowNewVersionMessage": true,
+    "razor.disabled": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "explorer.confirmDelete": false,
+    "FSharp.msbuildHost": ".net core",
+    "docomment.activateOnEnter": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 200,
+    "editor.minimap.showSlider": "always",
+    "editor.smoothScrolling": true,
+    "telemetry.enableTelemetry": false,
+    "gitlens.advanced.telemetry.enabled": false,
+    "editor.cursorBlinking": "phase",
+    "workbench.colorTheme": "Field Lights",
+    "editor.cursorSmoothCaretAnimation": true,
+    "terminal.external.linuxExec": "kitty",
+    "terminal.integrated.fontSize": 15,
+    "python.jediEnabled": false,
+
+    // Haskell Settings stuff
+    "haskell.hlint.executablePath": "/home/dan/.local/bin/hlint",
+    "languageServerHaskell.trace.server": "verbose",
+    "languageServerHaskell.hieExecutablePath": "hie-8.8.3",
+    "python.pythonPath": "/bin/python3.8",
+}
