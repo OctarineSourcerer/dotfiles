@@ -31,7 +31,7 @@ bspc config pointer_follows_monitor    true
 
 # Startup stuff
 /home/dan/.screenlayout/Home.sh
-dunst &
+deadd-notification-center &
 udiskie &     # Automounting
 picom -b --experimental-backends --use-damage &
 /usr/lib/xfce-polkit/xfce-polkit & # Polkit auth agent
