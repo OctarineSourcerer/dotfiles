@@ -66,8 +66,7 @@ shift + @Print
 
 # Lock
 ctrl + super + l
-	i3lock -i ~/Pictures/lockscreen.png && echo mem > /sys/power/state
-
+	betterlockscreen -l
 
 # Toggle polybar
 super + b
@@ -138,6 +137,17 @@ super + shift + alt + {Left,Right}
 # focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last
+
+super + shift + button{4,5}
+	bspc node -d {next,prev}.local --follow
+
+# Win + mouse-scroll loops through desktops on monitor
+super + ctrl + button{4,5}
+    bspc desktop {next,prev}.local -f
+
+# Win + mouse-scroll loops through occupied desktops on monitor
+super + button{4,5}
+    bspc desktop {next,prev}.occupied.local -f
 
 # focus the older or newer node in the focus history
 super + {o,i}
