@@ -31,6 +31,7 @@ alias mDrive="sshfs -o IdentityFile=~/.ssh/id_rsa dsdgom@unix4.essex.ac.uk:/ufs/
 alias vim="nvim"
 alias gpuname="glxinfo | grep \"OpenGL renderer\""
 alias switchgpu="optimus-manager --switch auto --no-confirm"
+alias config='/usr/bin/git --git-dir=$HOME/.config/yadm/repo.git'
 
 function reset_time --description 'Update system clock, then sets hwclock to system clock. Useful for when Windows breaks time with it being localtime'
 	sudo ntpd -qg
