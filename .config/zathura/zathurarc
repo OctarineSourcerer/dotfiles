@@ -1,0 +1,30 @@
+set font "monospace normal 12"
+set default-bg "#1d1f21"
+set default-fg "#e0e0e0"
+set completion-group-bg "#1d1f21"
+set recolor true
+set recolor-lightcolor "#1d1f21"
+set recolor-darkcolor "#e0e0e0"
+set recolor-reverse-video "true"
+set recolor-keephue "true"
+set statusbar-bg "#282a2e"
+set statusbar-fg "#e0e0e0"
+set index-active-bg "#81a2be"
+map <C-h> set recolor-keephue toggle
+
+set selection-clipboard clipboard
+map b toggle_statusbar
+# Don't display statusbar first
+set guioptions ""
+
+# One page per row by default
+set pages-per-row 1
+
+# stop at page boundaries
+set scroll-page-aware "true"
+set smooth-scroll "true"
+set scroll-full-overlap 0.08
+
+set adjust-open "width"
+
+set continuous-hist-save "true"
