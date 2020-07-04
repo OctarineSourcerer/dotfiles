@@ -1,19 +1,29 @@
+configuration {
+  /* location: 1; */
+}
+
 * {
-  background-color: #282C33;
+  background-color: #282c33af;
   border-color: #2e343f;
   text-color: #8ca0aa;
-  spacing: 0;
-  width: 512px;
+  transparency: "real";
+}
+
+window {
+  font: "Sans-Serif 10";
+  width: 20%;
+  /* height: 100%; */
 }
 
 inputbar {
   border: 0 0 1px 0;
-  children: [prompt,entry];
+  children: [ prompt, entry ];
 }
 
 prompt {
   padding: 16px;
   border: 0 1px 0 0;
+  enabled: false;
 }
 
 textbox {
@@ -23,21 +33,41 @@ textbox {
   padding: 8px 16px;
 }
 
+/* Text entry textbox*/
 entry {
   padding: 16px;
 }
 
 listview {
-  cycle: false;
-  margin: 0 0 -1px 0;
-  scrollbar: false;
+  cycle: true;
+  scrollbar: true;
+  lines: 8;
+  columns: 1;
+  spacing: 2px;
 }
 
 element {
   border: 0 0 1px 0;
-  padding: 16px;
+  vertical-align: 1.0;
+  orientation: horizontal;
 }
 
 element selected {
-  background-color: #2e343f;
+  background-color: rgb(53, 57, 65);
 }
+
+element-icon {
+  size: 32px;
+  /* Top+bottom, left+right */
+  padding: 10px 10px;
+}
+
+element-text {
+  horizontal-align: 0;
+  vertical-align: 0.5;
+  padding: 0 0 0 -4px;
+}
+
+/* element-text,element-icon {
+  padding: 50px;
+} */

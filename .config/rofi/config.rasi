@@ -1,0 +1,20 @@
+configuration {
+	show-icons: true;
+	terminal: "rofi-sensible-terminal";
+	ssh-client: "ssh";
+	ssh-command: "{terminal} -e {ssh-client} {host}";
+	run-command: "{cmd}";
+	sort: true;
+	sorting-method: "fzf";
+	parse-hosts: true;
+	matching: "normal";
+	separator-style: "none";
+	scrollbar-width: 0;
+	theme: "slate";
+	kb-mode-next: "Shift+Right,Control+Tab,Alt+l";
+	kb-mode-previous: "Shift+Left,Control+Shift+Tab,Alt+h";
+	kb-row-up: "Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab,Alt+k";
+	kb-row-down: "Down,Control+n,Alt+j";
+	drun-display-format: "{name}";
+	window-thumbnail: true;
+}
