@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
+# Switch keymap
+super + alt + {1,2}
+	setxkbmap {gb,dvorak}
+
+
 ## Starting/killing programs
 # terminal
 
