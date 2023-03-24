@@ -10,7 +10,7 @@ configuration {
 	matching: "normal";
 	separator-style: "none";
 	scrollbar-width: 0;
-	theme: "slate";
+	icon-theme: "Papirus-Dark";
 	kb-mode-next: "Shift+Right,Control+Tab,Alt+l";
 	kb-mode-previous: "Shift+Left,Control+Shift+Tab,Alt+h";
 	kb-row-up: "Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab,Alt+k";
@@ -18,3 +18,4 @@ configuration {
 	drun-display-format: "{name}";
 	window-thumbnail: true;
 }
+@theme "slate"
