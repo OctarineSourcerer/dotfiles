@@ -1,5 +1,6 @@
 # Remove fish shell greeting
 set fish_greeting
+fish_vi_key_bindings
 
 # Set colours for less pager
 set -xU LESS_TERMCAP_md (printf "\e[01;31m")
@@ -25,6 +26,10 @@ set -xU DOTNET_CLI_TELEMETRY_OPTOUT 1
 
 # Set up env variable to allow configuring qt5 with qt5ct
 set -xU QT_QPA_PLATFORMTHEME qt5ct
+set -Ux QT_PLUGIN_PATH "/usr/lib/qt/plugins"
+
+# Bit autocomplete env variable
+set -Ux COMP_POINT 1
 
 # Sets up link to mDrive, must have approved ssh key and mDrive folder in home
 alias mDrive="sshfs -o IdentityFile=~/.ssh/id_rsa dsdgom@unix4.essex.ac.uk:/ufs/servh02/users/dsdgom ~/mDrive/"
@@ -32,6 +37,7 @@ alias vim="nvim"
 alias gpuname="glxinfo | grep \"OpenGL renderer\""
 alias switchgpu="optimus-manager --switch auto --no-confirm"
 alias config='/usr/bin/git --git-dir=$HOME/.config/yadm/repo.git'
+alias please='sudo'
 
 function reset_time --description 'Update system clock, then sets hwclock to system clock. Useful for when Windows breaks time with it being localtime'
 	sudo ntpd -qg
@@ -56,3 +62,5 @@ if test "$TERM" = "linux"
     end
     clear
 end
+
+thefuck --alias | source
