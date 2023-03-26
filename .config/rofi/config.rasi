@@ -1,5 +1,6 @@
 configuration {
 	show-icons: true;
+	icon-theme: "Papirus-Dark";
 	terminal: "rofi-sensible-terminal";
 	ssh-client: "ssh";
 	ssh-command: "{terminal} -e {ssh-client} {host}";
@@ -10,7 +11,6 @@ configuration {
 	matching: "normal";
 	separator-style: "none";
 	scrollbar-width: 0;
-	icon-theme: "Papirus-Dark";
 	kb-mode-next: "Shift+Right,Control+Tab,Alt+l";
 	kb-mode-previous: "Shift+Left,Control+Shift+Tab,Alt+h";
 	kb-row-up: "Up,Control+p,Shift+Tab,Shift+ISO_Left_Tab,Alt+k";
