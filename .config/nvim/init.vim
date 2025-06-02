@@ -1,4 +1,5 @@
 let mapleader="\<Space>"
+let maplocalleader="\\"
 set number " Line no at cursor
 "set relativenumber " Relative line numbers apart from that (for jumping)
 set linebreak " Break at word boundaries instead of first char at end
@@ -6,6 +7,8 @@ set linebreak " Break at word boundaries instead of first char at end
 " Tabs that are 4 spaces wide
 set tabstop=4
 set shiftwidth=4
+
+syntax on
 
 " Treat all numbers as decimal
 set nrformats=
@@ -18,6 +21,9 @@ set smartcase
 
 " Lets buffers not get unloaded when they're navigated away  from
 set hidden
+
+" Set vim's grep to use the much faster ripgrep
+set grepprg=rg\ --vimgrep\ $*
 
 " %% to do %:h - path without file
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -60,9 +66,20 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 	Plug 'lervag/vimtex'
 
+	Plug 'wellle/targets.vim'
+	"
+	Plug 'kaarmu/typst.vim'
+
+	Plug 'stevearc/oil.nvim'
+	Plug 'Olical/conjure'
+	Plug 'rhysd/clever-f.vim'
+
+	" filetype icons pls
+	" Plug 'nvim-tree/nvim-web-devicons'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
+lua require('oil').setup()
 " Setup leap keybindings
 lua require('leap').add_default_mappings()
 
