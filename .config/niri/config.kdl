@@ -372,8 +372,8 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
-    Mod+W     { focus-monitor-right; }
-    Mod+Shift+W     { move-window-to-monitor-right; }
+    Mod+W     { focus-monitor-next; }
+    Mod+Shift+W     { move-window-to-monitor-next; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
